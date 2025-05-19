@@ -24,22 +24,26 @@ import React from 'react';
     );
 
     const Footer = () => {
-      const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
-      return (
-        <footer className="bg-wakupay-dark text-wakupay-light py-12">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 mb-8">
-              <div>
-                <Link to="/" className="flex items-center mb-4">
-                  <img-replace src="/images/logo-footer.png" alt="WakuPay Footer Logo" className="h-8 w-auto mr-2"/>
-                  <span className="text-2xl font-bold font-poppins text-white">WakuPay</span>
-                </Link>
-                <p className="text-xs text-gray-400">
-                  Empoderando a migrantes, emprendedores y comunidades en América Latina y el Caribe. <br />
-                  Lanzamiento previsto: 2030.
-                </p>
-              </div>
+  return (
+    <footer className="bg-wakupay-dark text-wakupay-light py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <Link to="/" className="flex items-center mb-4">
+              <img 
+                src="/images/logo.png" 
+                alt="WakuPay Logo" 
+                className="h-8 w-8 mr-2" // Mismo tamaño que el ícono Zap
+              />
+              <span className="text-2xl font-bold font-poppins text-white">WakuPay</span>
+            </Link>
+            <p className="text-xs text-gray-400">
+              Empoderando a migrantes, emprendedores y comunidades en América Latina y el Caribe. <br />
+              Lanzamiento previsto: 2030.
+            </p>
+          </div>
               <div>
                 <p className="text-md font-semibold text-white mb-4 font-poppins">WakuPay</p>
                 <ul className="space-y-2">

@@ -34,18 +34,14 @@ const CollaboratePage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const professionLabel = professions.find(p => p.value === selectedProfession)?.label || otherProfession;
-    const mailtoLink = `mailto:Contactowakupay@gmail.com?subject=Colaboración WakuPay - ${professionLabel} (${name})&body=Hola WakuPay,%0D%0A%0D%0AMi nombre es ${name} (${email}) y estoy interesado/a en colaborar como ${professionLabel}.%0D%0A%0D%0AMis motivaciones o ideas son:%0D%0A${message}%0D%0A%0D%0ASaludos,`;
-    
-    window.location.href = mailtoLink;
-
     toast({
       title: "¡Gracias por tu interés!",
-      description: "Se abrirá tu cliente de correo para enviar tu solicitud. Por favor, completa y envía el email.",
+      description: "Tu solicitud ha sido enviada a través de Formspree. Te contactaremos pronto.",
       variant: "default",
       className: "bg-wakupay-primary text-white"
     });
 
+    // Restablecer los campos
     setName('');
     setEmail('');
     setMessage('');
@@ -86,7 +82,11 @@ const CollaboratePage = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formspree.io/f/xldbzzpv" method="POST" className="space-y-6">
+                  <input type="text" name="name" value={name} style={{ display: 'none' }} readOnly />
+                  <input type="email" name="email" value={email} style={{ display: 'none' }} readOnly />
+                  <input type="text" name="profession" value={selectedProfession === 'other' ? otherProfession : professions.find(p => p.value === selectedProfession)?.label || ''} style={{ display: 'none' }} readOnly />
+                  <input type="text" name="message" value={message} style={{ display: 'none' }} readOnly />
                   <div>
                     <Label htmlFor="name" className="text-wakupay-dark dark:text-wakupay-light font-semibold">Nombre Completo</Label>
                     <Input 
@@ -163,8 +163,7 @@ const CollaboratePage = () => {
               </CardContent>
               <CardFooter>
                 <p className="text-xs text-center text-wakupay-dark/60 dark:text-wakupay-light/60 w-full">
-                    Al hacer clic, se abrirá tu cliente de correo electrónico predeterminado con un borrador.
-                    El correo de contacto es: <strong className="gradient-text">Contactowakupay@gmail.com</strong>
+                  Tu solicitud se enviará a través de Formspree. El correo de contacto asociado es: <strong className="gradient-text">Contactowakupay@gmail.com</strong>
                 </p>
               </CardFooter>
             </Card>
@@ -201,10 +200,10 @@ const CollaboratePage = () => {
                 </p>
               </CardContent>
             </Card>
-             <div className="text-center mt-6">
-                <Button variant="outline" asChild className="border-wakupay-primary text-wakupay-primary hover:bg-wakupay-primary/10 dark:text-wakupay-accent dark:border-wakupay-accent">
-                    <Link to="/inversionistas">¿Interesado en Invertir?</Link>
-                </Button>
+            <div className="text-center mt-6">
+              <Button variant="outline" asChild className="border-wakupay-primary text-wakupay-primary hover:bg-wakupay-primary/10 dark:text-wakupay-accent dark:border-wakupay-accent">
+                <Link to="/inversionistas">¿Interesado en Invertir?</Link>
+              </Button>
             </div>
           </motion.div>
         </div>

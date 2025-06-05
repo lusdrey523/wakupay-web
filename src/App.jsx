@@ -36,7 +36,7 @@ function LayoutWrapper({ children }) {
   const isDashboardPage = location.pathname === '/dashboard';
 
   return (
-    <div className="flex flex-col min-h-screen bg-wakupay-light dark:bg-wakupay-dark text-wakupay-dark dark:text-wakupay-light">
+    <div className="flex flex-col min-h-screen bg-zafupay-light dark:bg-zafupay-dark text-zafupay-dark dark:text-zafupay-light">
       {!isDashboardPage && <Navbar />}
       <main className={`flex-grow ${isDashboardPage ? '' : 'pb-16 md:pb-0'}`}>
         {children}
@@ -77,19 +77,19 @@ function App() {
   const [showCookiePopup, setShowCookiePopup] = useState(false);
 
   useEffect(() => {
-    const consent = localStorage.getItem('wakupay_cookie_consent');
+    const consent = localStorage.getItem('zafupay_cookie_consent');
     if (!consent) {
       setShowCookiePopup(true);
     }
   }, []);
 
   const handleAcceptCookies = () => {
-    localStorage.setItem('wakupay_cookie_consent', 'accepted');
+    localStorage.setItem('zafupay_cookie_consent', 'accepted');
     setShowCookiePopup(false);
   };
 
   const handleDeclineCookies = () => {
-    localStorage.setItem('wakupay_cookie_consent', 'declined');
+    localStorage.setItem('zafupay_cookie_consent', 'declined');
     setShowCookiePopup(false);
   };
 	

@@ -51,11 +51,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        'wakupay-primary': 'hsl(var(--wakupay-primary))', // Teal-like: #4A90E2 (original) -> hsl(207, 70%, 58%)
-        'wakupay-secondary': 'hsl(var(--wakupay-secondary))', // Bright Orange/Yellow: #50C878 (original) -> hsl(145, 58%, 55%)
-        'wakupay-accent': 'hsl(var(--wakupay-accent))', // Vibrant Purple
-        'wakupay-dark': 'hsl(var(--wakupay-dark))', // Dark Blue/Gray for text
-        'wakupay-light': 'hsl(var(--wakupay-light))', // Light Gray for backgrounds
+        'zafupay-primary': 'hsl(var(--zafupay-primary))', // Teal-like: #4A90E2 (original) -> hsl(207, 70%, 58%)
+        'zafupay-secondary': 'hsl(var(--zafupay-secondary))', // Bright Orange/Yellow: #50C878 (original) -> hsl(145, 58%, 55%)
+        'zafupay-accent': 'hsl(var(--zafupay-accent))', // Vibrant Purple
+        'zafupay-dark': 'hsl(var(--zafupay-dark))', // Dark Blue/Gray for text
+        'zafupay-light': 'hsl(var(--zafupay-light))', // Light Gray for backgrounds
       },
       borderRadius: {
         lg: "var(--radius)",

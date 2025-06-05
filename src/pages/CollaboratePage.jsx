@@ -50,7 +50,7 @@ const CollaboratePage = () => {
   };
 
   return (
-    <div className="py-16 md:py-24 bg-gradient-to-br from-Zafupay-primary/5 via-Zafupay-light to-Zafupay-secondary/5 dark:from-Zafupay-primary/10 dark:via-Zafupay-dark dark:to-Zafupay-secondary/10">
+    <div className="py-16 md:py-24 bg-gradient-to-br from-zafupay-primary/5 via-zafupay-light to-zafupay-secondary/5 dark:from-zafupay-primary/10 dark:via-zafupay-dark dark:to-zafupay-secondary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -30 }}
@@ -58,9 +58,9 @@ const CollaboratePage = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="text-center mb-12 md:mb-16"
         >
-          <Handshake className="h-16 w-16 text-Zafupay-primary mx-auto mb-6" />
+          <Handshake className="h-16 w-16 text-zafupay-primary mx-auto mb-6" />
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-            Únete a la <span className="gradient-text">Revolución Zafupay</span>
+            Únete a la <span className="gradient-text">Revolución ZafuPay</span>
           </h1>
           <p className="text-lg md:text-xl text-zafupay-dark/80 dark:text-Zafupay-light/80 max-w-3xl mx-auto">
             ZafuPay es un proyecto de impacto social con lanzamiento en 2030 y necesitamos tu talento para construir el futuro financiero de la región. Si eres un profesional apasionado o simplemente quieres apoyar una causa transformadora, ¡queremos conocerte, porque con tu ayuda el lanzamiento se podría realizar mucho antes!.

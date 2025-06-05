@@ -35,11 +35,11 @@
 
 		--radius: 0.5rem;
 
-    --wakupay-primary: 175 65% 45%; /* Teal */
-    --wakupay-secondary: 45 90% 55%; /* Bright Orange/Yellow */
-    --wakupay-accent: 260 70% 65%; /* Vibrant Purple */
-    --wakupay-dark: 210 20% 20%; /* Dark Blue/Gray for text */
-    --wakupay-light: 210 30% 97%; /* Light Gray for backgrounds */
+    --zafupay-primary: 175 65% 45%; /* Teal */
+    --zafupay-secondary: 45 90% 55%; /* Bright Orange/Yellow */
+    --zafupay-accent: 260 70% 65%; /* Vibrant Purple */
+    --zafupay-dark: 210 20% 20%; /* Dark Blue/Gray for text */
+    --zafupay-light: 210 30% 97%; /* Light Gray for backgrounds */
 	}
 
 	.dark {
@@ -71,11 +71,11 @@
 		--input: 217.2 32.6% 17.5%;
 		--ring: 212.7 26.8% 83.9%;
 
-    --wakupay-primary: 175 60% 35%;
-    --wakupay-secondary: 45 80% 45%;
-    --wakupay-accent: 260 60% 55%;
-    --wakupay-dark: 210 30% 90%;
-    --wakupay-light: 210 20% 15%;
+    --zafupay-primary: 175 60% 35%;
+    --zafupay-secondary: 45 80% 45%;
+    --zafupay-accent: 260 60% 55%;
+    --zafupay-dark: 210 30% 90%;
+    --zafupay-light: 210 20% 15%;
 	}
 }
 
